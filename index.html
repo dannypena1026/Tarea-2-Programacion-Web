@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app">
+        <section class="calculator" aria-label="Calculadora">
+            <div class="display-area">
+                <p id="operation" class="operation">&nbsp;</p>
+                <input id="display" class="display" type="text" value="0" readonly aria-label="Resultado">
+            </div>
+
+            <div class="buttons" aria-label="Botones de la calculadora">
+                <button type="button" class="btn utility" data-action="clear">C</button>
+                <button type="button" class="btn utility" data-action="delete">DEL</button>
+                <button type="button" class="btn operator" data-operator="/">/</button>
+                <button type="button" class="btn operator" data-operator="*">x</button>
+
+                <button type="button" class="btn" data-number="7">7</button>
+                <button type="button" class="btn" data-number="8">8</button>
+                <button type="button" class="btn" data-number="9">9</button>
+                <button type="button" class="btn operator" data-operator="-">-</button>
+
+                <button type="button" class="btn" data-number="4">4</button>
+                <button type="button" class="btn" data-number="5">5</button>
+                <button type="button" class="btn" data-number="6">6</button>
+                <button type="button" class="btn operator" data-operator="+">+</button>
+
+                <button type="button" class="btn" data-number="1">1</button>
+                <button type="button" class="btn" data-number="2">2</button>
+                <button type="button" class="btn" data-number="3">3</button>
+                <button type="button" class="btn equal" data-action="equals">=</button>
+
+                <button type="button" class="btn zero" data-number="0">0</button>
+                <button type="button" class="btn" data-action="decimal">.</button>
+            </div>
+        </section>
+
+        <aside class="history-panel" aria-label="Historial de calculos">
+            <div class="history-header">
+                <div>
+                    <h1>Calculadora WEB</h1>
+                    <p>Historial guardado con localStorage</p>
+                </div>
+                <button type="button" id="clearHistory" class="clear-history">Limpiar</button>
+            </div>
+            <ul id="historyList" class="history-list"></ul>
+            <p id="emptyHistory" class="empty-history">No hay operaciones guardadas.</p>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
